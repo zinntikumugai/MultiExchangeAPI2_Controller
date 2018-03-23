@@ -1,0 +1,21 @@
+{
+    "name": "zinntikumugai/multi-exchange-api2_controller",
+    "description": "Multi Exchange API Controller",
+    "type": "library",
+    "require": {
+        "zinntikumugai/multi-exchange-api2": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zinntikumugai",
+            "email": "uesitananame55@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MEAPI2C\\": "src/"
+        }
+    }
+}
