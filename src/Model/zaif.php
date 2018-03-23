@@ -7,11 +7,12 @@ class zaif implements \MEAPI2C\Module\BaseModelInterface {
     const DEFMARKET = 'btc_jpy';
 
     //通貨の価格
-    public function ticker($marketname) {
+    public function ticker($marketname = self::DEFMARKET) {
         $data = \mpyw\Co\Co::wait(
             \MEAPI2\Model\zaif::sw('ticker', $marketname)
         );
         $tikerData = [
+            'market' => $marketname,
             'last' => $data->last,
             'high' => $data->high,
             'low' => $data->low,

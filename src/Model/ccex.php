@@ -7,11 +7,12 @@ class ccex implements \MEAPI2C\Module\BaseModelInterface {
     const DEFMARKET = 'dash-btc';
 
     //通貨の価格
-    public function ticker($marketname){
+    public function ticker($marketname = self::DEFMARKET){
         $data = \mpyw\Co\Co::wait(
             \MEAPI2\Model\ccex::ticker('ticker', $marketname)
         );
         $tikerData = [
+            'market' => $marketname,
             'last' => $data->ticker->lastprice,
             'high' => $data->ticker->high,
             'low' => $data->ticker->low,
