@@ -43,7 +43,6 @@ class zaif implements \MEAPI2C\Module\BaseModelInterface {
         $datas = \mpyw\Co\Co::wait(
             \MEAPI2\Model\zaif::curr('all')
         );
-        var_dump($datas);
         foreach($datas as $data) {
             $currencydata = [
                 'name' => $data->name,
